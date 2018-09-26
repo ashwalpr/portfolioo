@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .calculator {
+      background-color: #000;
+      padding: 20px;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    input {
+      width: 100%;
+      background: #fff;
+      padding: 10px;
+      font-size: 20px;
+      text-align: center;
+      border: none;
+      margin-bottom: 5px;
+      color: #000;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      padding: 10px;
+      background: #fff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      color: #000;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="number" id="input1" placeholder="input 1">
+    <input type="number" id="input2" placeholder="input 2">
+    <input type="text" id="output" placeholder="result" disabled>
+    <div class="buttons">
+      <button value="+">+</button>
+      <button value="-">-</button>
+      <button value="*">*</button>
+    </div>
+  </div>
+
+  <script>
+    function calculate(e) {
+      var input1 = parseFloat(document.getElementById('input1').value);
+      var input2 = parseFloat(document.getElementById('input2').value);
+      var operator = e.target.value;
+
+      if(operator == '+') {
+        document.getElementById('output').value = input1 + input2;
+      } else if(operator == '-') {
+        document.getElementById('output').value = input1 - input2;
+      } else if(operator == '*') {
+        document.getElementById('output').value = input1 * input2;
+      }
+    }
+
+    for(var i = 0; i < document.querySelectorAll('.buttons button').length; i++) {
+      document.querySelectorAll('.buttons button')[i].addEventListener('click', calculate);
+    }
+  </script>
+</body>
+</html>
