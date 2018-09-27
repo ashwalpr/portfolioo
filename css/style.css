@@ -126,6 +126,10 @@ header .wrapper nav ul li a {
 .resume .wrapper>h1 {
   font-size: 35px;
   font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 0px;
+  border-bottom: 2px solid #000;
+  display: inline-block;
 }
 .resume .wrapper .skills {
   display: inline-block;
@@ -139,6 +143,7 @@ header .wrapper nav ul li a {
   font-weight: 600;
   color: #fff;
   margin-bottom: 20px;
+
   /* text-align: center; */
 }
 .resume .wrapper .skills ul li {
@@ -234,7 +239,7 @@ header .wrapper nav ul li a {
 }
 .resume .wrapper .hobbies {
   width: calc(33% - 10px);
-  background-color: red;
+  background-color: #333333;
   float: right;
   margin-top: 20px;
   margin-right: 10px;
@@ -328,11 +333,13 @@ header .wrapper nav ul li a {
 }
 /* portfolio */
 .portfolio {
-  margin-top: 50px;
+  margin-top: 15px;
 }
 .portfolio .wrapper h1 {
   font-size: 30px;
   font-weight: 500;
+  border-bottom: 2px solid #000;
+  display: inline-block;
 }
 .portfolio .wrapper>h1 {
   font-size: 35px;
